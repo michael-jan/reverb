@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="IUH6hV" name="Reverb" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginCharacteristicsValue="pluginIsMidiEffectPlugin"
-              pluginAUMainType="'aufx'" pluginAUIsSandboxSafe="1" pluginVST3Category="Fx,Reverb"
-              pluginRTASCategory="8" pluginAAXCategory="8">
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginAUMainType="'aufx'"
+              pluginAUIsSandboxSafe="1" pluginVST3Category="Fx,Reverb" pluginRTASCategory="8"
+              pluginAAXCategory="8">
   <MAINGROUP id="OGDyYv" name="Reverb">
     <GROUP id="{323A5CC4-0D08-5291-BB12-CF5D60AB9C12}" name="Source">
+      <FILE id="Z5HSdp" name="Comb.cpp" compile="1" resource="0" file="Source/Comb.cpp"/>
+      <FILE id="SQa4KE" name="Comb.h" compile="0" resource="0" file="Source/Comb.h"/>
       <FILE id="FHfOux" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="hOlyIO" name="PluginProcessor.h" compile="0" resource="0"

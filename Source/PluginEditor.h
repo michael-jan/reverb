@@ -11,6 +11,8 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
+using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
+
 //==============================================================================
 /**
 */
@@ -28,6 +30,9 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     ReverbAudioProcessor& audioProcessor;
+    
+    juce::Slider delaySlider;
+    std::unique_ptr<SliderAttachment> delayAttachment;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ReverbAudioProcessorEditor)
 };

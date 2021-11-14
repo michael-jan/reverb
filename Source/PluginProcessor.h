@@ -9,6 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "Comb.h"
 
 //==============================================================================
 /**
@@ -52,8 +53,20 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    
+    //==============================================================================
+    juce::AudioProcessorValueTreeState& getParams() { return params; }
 
 private:
     //==============================================================================
+    
+    juce::AudioParameterInt* delayParam;
+
+    juce::AudioProcessorValueTreeState params;
+
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+    
+    Comb comb[2];
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ReverbAudioProcessor)
 };
