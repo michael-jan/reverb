@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Custom
+Builds/
+JuceLibraryCode/
+.ccls
+.ccls-cache
+Projucer
+.DS_Store
